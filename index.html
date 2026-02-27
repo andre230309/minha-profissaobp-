@@ -318,7 +318,7 @@
     <!-- Header -->
     <header>
         <nav class="navbar">
-            <a href="#" class="logo"><i class="fas fa-calculator"></i> Silva & <span>Lima</span></a>
+            <a href="#" class="logo"><i class="fas fa-calculator"></i> André<span>Empreendimentos</span></a>
             
             <div class="menu-toggle" id="mobile-menu">
                 <i class="fas fa-bars"></i>
@@ -419,4 +419,105 @@
                             <h4>100%</h4>
                             <p>Digital</p>
                         </div>
-                   
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contato -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Entre em Contato</h2>
+                <p>Estamos prontos para atender sua empresa</p>
+            </div>
+
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>Av. Paulista, 1000 - Bela Vista, São Paulo - SP</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <p>(11) 3333-4444</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <p>contato@andreempreendimentos.com.br</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-clock"></i>
+                        <p>Seg - Sex: 8h às 18h</p>
+                    </div>
+                </div>
+
+                <div class="contact-form">
+                    <form>
+                        <div class="form-group">
+                            <input type="text" placeholder="Seu nome" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Seu e-mail" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" placeholder="Assunto">
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Sua mensagem" required></textarea>
+                        </div>
+                        <button type="submit" class="btn-submit">Enviar Mensagem</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-col">
+                <h4>André Empreendimentos</h4>
+                <p>Excelência em contabilidade e consultoria empresarial.</p>
+                <div style="margin-top: 15px;">
+                    <i class="fab fa-facebook" style="margin-right: 15px;"></i>
+                    <i class="fab fa-instagram" style="margin-right: 15px;"></i>
+                    <i class="fab fa-linkedin"></i>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Links Rápidos</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Serviços</a></li>
+                    <li><a href="#about">Sobre Nós</a></li>
+                    <li><a href="#contact">Contato</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Serviços</h4>
+                <ul>
+                    <li>Contabilidade Geral</li>
+                    <li>Folha de Pagamento</li>
+                    <li>Abertura de Empresas</li>
+                    <li>Consultoria</li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 André Empreendimentos Contabilidade. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Script para menu mobile (opcional) -->
+    <script>
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navLinks = document.querySelector('.nav-links');
+
+        mobileMenu.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
