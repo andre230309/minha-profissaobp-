@@ -367,13 +367,17 @@ footer a:hover{color:var(--accent);}
 <div class="info-item"><i class="fas fa-clock"></i><p>Seg - Sex: 8h às 18h</p></div>
 </div>
 
-<!-- FORMULÁRIO FUNCIONAL -->
+<!-- FORMULÁRIO FUNCIONAL PARA GITHUB PAGES -->
 <div class="contact-form">
-<form action="enviar_email.php" method="POST">
-<div class="form-group"><input type="text" name="nome" placeholder="Seu nome" required></div>
+<form action="https://formsubmit.co/andre.cegielski@escola.pr.gov.br" method="POST">
+<div class="form-group"><input type="text" name="name" placeholder="Seu nome" required></div>
 <div class="form-group"><input type="email" name="email" placeholder="Seu e-mail" required></div>
-<div class="form-group"><input type="text" name="assunto" placeholder="Assunto"></div>
-<div class="form-group"><textarea name="mensagem" placeholder="Sua mensagem" required></textarea></div>
+<div class="form-group"><input type="text" name="subject" placeholder="Assunto"></div>
+<div class="form-group"><textarea name="message" placeholder="Sua mensagem" required></textarea></div>
+
+<!-- Opcional: redirecionar de volta para o site após envio -->
+<input type="hidden" name="_next" value="https://seusite.github.io/#contact">
+
 <button type="submit" class="btn-submit">Enviar Mensagem</button>
 </form>
 </div>
