@@ -272,7 +272,7 @@ footer a:hover{color:var(--accent);}
 </nav>
 </header>
 
-<!-- SEÇÃO DE SALÁRIOS COM CARDS -->
+<!-- SEÇÃO DE SALÁRIOS -->
 <section class="salary-section" id="salary">
 <h2 class="salary-title">Informações de Mercado</h2>
 <div class="salary-cards">
@@ -363,22 +363,18 @@ footer a:hover{color:var(--accent);}
 <div class="contact-info">
 <div class="info-item"><i class="fas fa-map-marker-alt"></i><p>Rua Paraíba, 1235 - Capanema, PR</p></div>
 <div class="info-item"><i class="fas fa-phone-alt"></i><p>(46)99924-9371</p></div>
-<div class="info-item"><i class="fas fa-envelope"></i><p>Gmail: andre.cegielski@escola.pr.gov.br</p></div>
+<div class="info-item"><i class="fas fa-envelope"></i><p>andre.cegielski@escola.pr.gov.br</p></div>
 <div class="info-item"><i class="fas fa-clock"></i><p>Seg - Sex: 8h às 18h</p></div>
 </div>
 
-<!-- FORMULÁRIO FUNCIONAL PARA GITHUB PAGES -->
 <div class="contact-form">
-<form action="https://formsubmit.co/andre.cegielski@escola.pr.gov.br" method="POST">
+<form id="contactForm">
 <div class="form-group"><input type="text" name="name" placeholder="Seu nome" required></div>
 <div class="form-group"><input type="email" name="email" placeholder="Seu e-mail" required></div>
 <div class="form-group"><input type="text" name="subject" placeholder="Assunto"></div>
 <div class="form-group"><textarea name="message" placeholder="Sua mensagem" required></textarea></div>
-
-<!-- Opcional: redirecionar de volta para o site após envio -->
-<input type="hidden" name="_next" value="https://seusite.github.io/#contact">
-
 <button type="submit" class="btn-submit">Enviar Mensagem</button>
+<p id="formMessage" style="margin-top:15px;color:green;display:none;">Mensagem enviada com sucesso!</p>
 </form>
 </div>
 
@@ -392,10 +388,30 @@ footer a:hover{color:var(--accent);}
 </footer>
 
 <script>
+// Menu mobile
 const mobileMenu = document.getElementById('mobile-menu');
 const navLinks = document.querySelector('.nav-links');
 mobileMenu.addEventListener('click',()=>{
 navLinks.classList.toggle('active');
+});
+
+// Formulário AJAX
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  const form = e.target;
+  const data = new FormData(form);
+
+  fetch('https://formsubmit.co/ajax/andre.cegielski@escola.pr.gov.br', {
+    method: 'POST',
+    body: data,
+    headers: { 'Accept': 'application/json' }
+  })
+  .then(response => response.json())
+  .then(data => {
+    document.getElementById('formMessage').style.display = 'block';
+    form.reset();
+  })
+  .catch(error => alert("Ocorreu um erro: " + error));
 });
 </script>
 
